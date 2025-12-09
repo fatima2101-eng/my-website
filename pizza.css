@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 4rem;
+  min-height: 100vh;
+  gap: 2rem;
+   align-items: stretch;
+}
+
+/* LEFT SIDE: Recipe */
+.left-side {
+  flex: 2; /* takes most space */
+  max-width: 65%;
+  overflow-y: auto; /* scroll if text is long */
+  line-height: 1.6;
+  font-size: 22px;
+  animation: slideInRight 1s ease forwards;
+}
+
+/* RIGHT SIDE: Image */
+.right-side {
+  flex: 1; /* smaller than recipe */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center */
+  max-width: 35%;
+  animation: slideInRight 1s ease forwards;
+}
+
+.right-side img {
+  width: 100%; /* full width of container */
+  max-height: 400px; /* short height, not square */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Animation */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    background-color: lightgreen;
+     flex-direction: column; 
+  }
+}
+
+/* When the screen is very small, e.g., phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    background-color: lightpink;
+  }
+}

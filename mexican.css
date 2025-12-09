@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #080707;
+    color: #fff;
+    overflow-x: hidden; /* prevent horizontal scrollbar from animation */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 6rem;
+    gap: 3rem;
+    width: 100%;
+}
+
+/* CENTERED MAIN HEADING */
+body::before {
+    content: "MEXICAN CUISINE";
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #d0751b;
+    margin-top: 2rem;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* LEFT SIDE */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInRight 1s ease forwards;
+}
+
+.header {
+    font-size: 2.8rem;
+    color: #643a11;
+    margin: 0;
+    text-transform: uppercase;
+     text-decoration-line: underline ;
+    text-decoration-color: #b46907 ;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #806142;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* RIGHT SIDE */
+.right-side {
+    flex: 2; /* bigger area for boxes */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* DISH BOXES */
+.dish-box {
+    margin-top: 0rem;
+    width: 700px;
+    height: 100px;
+    background-color: #4f2d19;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e9e3e3;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideInRight 1s ease forwards;
+    margin-top: 0.7rem;
+}
+
+.dish-box:hover {
+    transform: translateY(-10px);
+    background-color: #452512 ;
+    color: #ded9d9;
+    box-shadow: 0 20px 20px rgba(207, 126, 45, 0.4);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    background-color: rgb(1, 1, 1);
+     flex-direction: column; 
+  }
+}
+
+/* When the screen is very small, e.g., phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    background-color: rgb(5, 5, 5);
+  }
+}
+#emojiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;       /* behind content */
+  pointer-events: none; /* allow clicks through canvas */
+}

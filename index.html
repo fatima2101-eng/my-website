@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recipes</title>
+  <link rel="stylesheet" href="./style.css">
+  
+
+</head>
+<body style="background-color: black;">
+ <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+  <h1 style="color: #e68947;" class="header">A COLLECTION OF RECIPES</h1>
+   <nav class="navbar">
+    <div class="logo">Eat.Create.Enjoy</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a>
+        <ul class="dropdown">
+          <li>Latest Recipes</li>
+        <li>Popular Recipes</li>
+        <li>Featured</li>
+        <li>Quick Meals</li>
+        </ul>
+      </li>
+      <li><a href="#">Cuisines</a>
+        <ul class="dropdown">
+          <li>Chinese</li>
+        <li>Mexican</li>
+        <li>Arabic</li>
+        <li>Italian</li>
+        </ul>
+      </li>
+      <li><a href="#">About</a>
+        <ul class="dropdown">
+          <li>Dishes from 10+ cuisines</li>
+        <li>Quick meals under 30 minutes</li>
+        <li>Cooking tips & ingredient swaps</li>
+        <li>Beautiful food photography</li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a>
+        <ul class="dropdown">
+          <li>+973 3351 7955</li>
+        <li>recipe@gmail.com</li>
+        <li>Based in Bahrain</li>
+        <li>By Fathima shelil</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+ <!-- Centered Name Input Box -->
+  <!-- SURPRISE ME BOX -->
+<div class="dish-box surprise-box" onclick="surpriseMe()">
+  <b>🎲 Surprise Me!</b>
+</div>
+
+<div id="name-box">
+  <p>Enter your name:</p>
+  <input type="text" id="name-field" placeholder="Your name" />
+  <button id="name-btn">Submit</button>
+</div>
+
+
+  <div class="main">
+    <div class="box box1">
+       <a href="italian.html" target="_blank">
+      <img src="italian.jpg" alt="">
+      <p class="caption">ITALIAN CUISINE</p>
+      </a>
+    </div>
+    <div class="box box2">
+      <a href="chinese.html" target="_blank">
+      <img src="chinese.jpg" alt="">
+      <p class="caption">CHINESE CUISINE</p>
+      </a>
+    </div>
+    <div class="box box3">
+      <a href="mexican.html" target="_blank">
+      <img src="mexican.jpg" alt="">
+      <p class="caption">MEXICAN CUISINE</p>
+      </a>
+    </div>
+    <div class="box box4">
+      <a href="arabic.html" target="_blank">
+      <img src="arabic.jpg" alt="">
+      <p class="caption">ARABIC CUISINE</p>
+      </a>
+    </div>
+    <div class="box box5">
+      <a href="indian.html" target="_blank">
+      <img src="indian.jpg" alt="">
+      <p class="caption">INDIAN CUISINE</p>
+      </a>
+    </div>
+     <div class="box box6">
+      <a href="american.html" target="_blank">
+      <img src="amercican.jpg" alt="">
+      <p class="caption">AMERICAN CUISINE</p>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="form-section">
+  <div class="form-text">
+    <h1>REGISTER TO JOIN COOKING CLASSES</h1>
+    <div class="subtitle">
+    <p>Sign up now to learn amazing recipes and cooking techniques from world-class chefs. Discover cuisines from around the world!</p>
+    </div>
+  </div>
+  <div class="form-box">
+ <form id="cooking-form">
+  <label>Name:</label>
+<input type="text" name="user_name" required>
+
+<label>Email:</label>
+<input type="email" name="user_email" required>
+
+<label>Gender:</label>
+<div>
+  <input type="radio" name="user_gender" value="Male"> Male
+  <input type="radio" name="user_gender" value="Female"> Female
+</div>
+
+<label>Course:</label>
+<select name="user_course">
+  <option>Italian Cuisine</option>
+  <option>Chinese Cuisine</option>
+  <option>Arabic Cuisine</option>
+</select>
+
+<input type="submit" value="Register">
+</form>
+
+
+</div>
+
+    </div>
+ 
+
+
+</body>
+</html>
